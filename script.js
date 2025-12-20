@@ -162,13 +162,8 @@ function detectLanguage() {
         return savedLang;
     }
     
-    // Check browser language
-    const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang.startsWith('cs') || browserLang.startsWith('sk')) {
-        return 'cs';
-    }
-    
-    return 'en'; // Default to English for other countries
+    // Default to Czech
+    return 'cs';
 }
 
 // Apply translations
@@ -420,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.classList.add('animate-on-scroll');
             // Stagger animation delay for items
             if (selector.includes('_item')) {
-                el.style.transitionDelay = `${index * 0.1}s`;
+                el.style.transitionDelay = `${index * 0.05}s`;
             }
             observer.observe(el);
         });
