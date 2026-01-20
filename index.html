@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jirka086 - Full-stack developer specializující se na webové aplikace, Python, JavaScript a moderní technologie. Portfolio a kontakt.">
     <title>Jirka086 &gt;developer&lt;</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles.css?v=11">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" media="print" onload="this.media='all'">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
     <nav>
@@ -20,11 +22,10 @@
         </button>
         <div class="links-center">
             <ul>
-                <li><a href="#about" data-translate="nav-about">O mně</a></li>
-                <li><a href="#skills" data-translate="nav-skills">Skills</a></li>
-                <li><a href="#projects" data-translate="nav-projects">Projekty</a></li>
-                <li><a href="#offer" data-translate="nav-offer">Nabízím</a></li>
-                <li><a href="#contact" data-translate="nav-contact">Kontakt</a></li>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
         <div class="controls-right">
@@ -58,31 +59,31 @@
     </div>
     <div class="about" id="about">
         <div class="hero_left">
-            <p class="light_text" data-translate="about-hello">AHOJ, JSEM</p>
-            <h1 class="name" data-translate="about-name">Jirka086</h1>
-            <h2 class="developer" data-translate="about-role">Developer a IT specialista</h2>
-            <p class="description" data-translate="about-description">Jsem nadšenec pro technologie se zaměřením na správu serverů, vývoj webových stránek a webových aplikací. Baví mě experimentovat, hledat nová řešení a neustále se zdokonalovat. Rád pomáhám ostatním, sdílím své znalosti a v současnosti studuji IT.</p>
-            <a href="#contact" class="contact_button" data-translate="about-button">Kontaktujte mě</a>
+            <p class="light_text">AHOJ, JSEM</p>
+            <h1 class="name">Jirka086</h1>
+            <h2 class="developer">Developer a IT specialista</h2>
+            <p class="description">Jsem nadšenec pro technologie se zaměřením na správu serverů, vývoj webových stránek a webových aplikací. Baví mě experimentovat, hledat nová řešení a neustále se zdokonalovat. Rád pomáhám ostatním, sdílím své znalosti a v současnosti studuji IT.</p>
+            <a href="#contact" class="contact_button">Napište mi</a>
         </div>
         <div class="hero_right">
-            <img src="images/profile.webp" alt="Profilový obrázek Jirka086" loading="lazy">
+            <img src="https://Action-Gaming.b-cdn.net/images/profile.webp" alt="Profilový obrázek Jirka086" width="400" height="400" loading="lazy">
         </div>
         <div class="scroll-indicator">
             <span class="material-symbols-outlined">expand_more</span>
         </div>
     </div>
     <div class="skills" id="skills">
-        <h1 data-translate="skills-title">Moje zkušenosti</h1>
-        <p class="skill_subtitle" data-translate="skills-frontend">Frontend</p>
+        <h1>Moje zkušenosti</h1>
+        <p class="skill_subtitle">Frontend</p>
         <div class="skill_frontend_grid">
             <div class="skill_item">HTML5</div>
             <div class="skill_item">CSS3</div>
         </div>
-        <p class="skill_subtitle" data-translate="skills-backend">Backend</p>
+        <p class="skill_subtitle">Backend</p>
         <div class="skill_backend_grid">
             <div class="skill_item">MySQL - MariaDB</div>
         </div>
-        <p class="skill_subtitle" data-translate="skills-tools">Nástroje a platformy</p>
+        <p class="skill_subtitle">Nástroje a platformy</p>
         <div class="skill_tools_grid">
             <div class="skill_item">Github</div>
             <div class="skill_item">Docker</div>
@@ -92,126 +93,90 @@
             <div class="skill_item">Cloudflare</div>
             <div class="skill_item">openmediavault</div>
         </div>
-        <p class="gameservers" data-translate="skills-gameservers">Technik herních serverů</p>
+        <p class="gameservers">Technik herních serverů</p>
         <div class="skill_gameservers_grid">
             <div class="skill_item">Minecraft</div>
             <div class="skill_item">SCP:SL</div>
             <div class="skill_item">beammp</div>
             <div class="skill_item">a více</div>
         </div>
-        <p class="skill_subtitle" data-translate="skills-learning">Základy / Učím se</p>
+        <p class="skill_subtitle">Základy / Učím se</p>
         <div class="skill_learning_grid">
             <div class="skill_item">JavaScript</div>
             <div class="skill_item">PHP</div>
         </div>
     </div>
     <div class="projects" id="projects">
-        <h1 data-translate="projects-title">Moje projekty</h1>
+        <h1>Moje projekty</h1>
         <div class="project_grid">
             <div class="project_item">
                 <div class="project_content">
-                    <h2 class="project_title" data-translate="project1-title">Action Gaming</h2>
-                    <p class="project_techorposition" data-translate="project1-tech">Spolumajitel (Technik)</p>
-                    <p class="project_description" data-translate="project1-desc">Herní portál Action Gaming hostuje servery pro hru SCP:SL s kvalitním roleplay zážitkem. Jsme komunita, kde si zakládáme na civilizovaném chování a především na již zmíněné kvalitě. Nabízíme vlastní mapy, pluginy a profesionální tým včetně vedení serveru. Naším cílem je posunout hranici zpátky tam, kde byla již před několika lety na jiných serverech, kde roleplay ještě představovalo ten pravý zážitek a každý se měl možnost něco nového naučit.</p>
-                    <a href="https://actiongaming.cz" class="project_link" data-translate="project1-link">Discord invite</a>
+                    <h2 class="project_title">Action Gaming</h2>
+                    <p class="project_techorposition">Spolumajitel (Technik)</p>
+                    <p class="project_description">Herní portál Action Gaming hostuje servery pro hru SCP:SL s kvalitním roleplay zážitkem. Jsme komunita, kde si zakládáme na civilizovaném chování a především na již zmíněné kvalitě. Nabízíme vlastní mapy, pluginy a profesionální tým včetně vedení serveru. Naším cílem je posunout hranici zpátky tam, kde byla již před několika lety na jiných serverech, kde roleplay ještě představovalo ten pravý zážitek a každý se měl možnost něco nového naučit.</p>
+                    <a href="https://actiongaming.cz" class="project_link">Discord invite</a>
                 </div>
-                <img src="images/action-gaming-preview2.webp" alt="Action Gaming" class="project_image" loading="lazy">
+                <img src="https://Action-Gaming.b-cdn.net/images/action-gaming-preview2.webp" alt="Action Gaming" class="project_image" width="600" height="338" loading="lazy">
             </div>
             <div class="project_item">
                 <div class="project_content">
-                    <h2 class="project_title" data-translate="project2-title">NAUTIXRP</h2>
-                    <p class="project_techorposition" data-translate="project2-tech">Community Management, vývoj webu: HTML5, PHP, CSS</p>
-                    <p class="project_description" data-translate="project2-desc">NautixRP je česká herní komunita zaměřená na kvalitní roleplay zážitek ve hře GTA V na platformě FiveM. Naším cílem je vytvořit prostředí, kde hráči mohou zažít autentické roleplay situace, rozvíjet své postavy a interagovat s ostatními členy komunity v přátelské a respektující atmosféře.</p>
-                    <a href="https://nautixrp.eu" class="project_link" data-translate="project2-link">Navštívit web</a>
+                    <h2 class="project_title">NAUTIXRP</h2>
+                    <p class="project_techorposition">Community Management, vývoj webu: HTML5, PHP, CSS</p>
+                    <p class="project_description">NautixRP je česká herní komunita zaměřená na kvalitní roleplay zážitek ve hře GTA V na platformě FiveM. Naším cílem je vytvořit prostředí, kde hráči mohou zažít autentické roleplay situace, rozvíjet své postavy a interagovat s ostatními členy komunity v přátelské a respektující atmosféře.</p>
+                    <a href="https://nautixrp.eu" class="project_link">Navštívit web</a>
                 </div>
-                <img src="images/heebTxs.webp" alt="NAUTIXRP" class="project_image" loading="lazy">
+                <img src="https://Action-Gaming.b-cdn.net/images/heebTxs.webp" alt="NAUTIXRP" class="project_image" width="600" height="338" loading="lazy">
             </div>
             <div class="project_item">
                 <div class="project_content">
-                    <h2 class="project_title" data-translate="project3-title">Portfolio</h2>
-                    <p class="project_techorposition" data-translate="project3-tech">Vývoj webu: HTML5, CSS, PHP, JavaScript</p>
-                    <p class="project_description" data-translate="project3-desc">Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT služeb. Portfolio slouží jako ukázka mé práce a umožňuje potenciálním klientům a zaměstnavatelům se lépe seznámit s mými schopnostmi.</p>
-                    <a href="https://jirka086.cz" class="project_link" data-translate="project3-link">Navštívit web</a>
+                    <h2 class="project_title">Portfolio</h2>
+                    <p class="project_techorposition">Vývoj webu: HTML5, CSS, PHP, JavaScript</p>
+                    <p class="project_description">Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT. Portfolio slouží jako ukázka mé práce a umožňuje ostatním se lépe seznámit s mými schopnostmi.</p>
+                    <a href="https://jirka086.cz" class="project_link">Navštívit web</a>
                 </div>
-                <img src="images/portfolio-dark-cz.webp" alt="Portfolio" class="project_image portfolio-preview" id="portfolio-preview" loading="lazy">
-            </div>
-        </div>
-    </div>
-    <div class="offer" id="offer">
-        <h1 data-translate="offer-title">Co nabízím</h1>
-        <div class="offer_grid">
-            <div class="offer_item">
-                <span class="material-symbols-outlined offer_icon">code</span>
-                <h2 class="offer_title" data-translate="offer1-title">Vývoj webu a webových aplikací</h2>
-                <p class="offer_description" data-translate="offer1-desc">Nabízím tvorbu moderních a responzivních webových stránek a aplikací přesně na míru vašim potřebám.</p>
-            </div>
-            <div class="offer_item">
-                <span class="material-symbols-outlined offer_icon">dns</span>
-                <h2 class="offer_title" data-translate="offer2-title">Správa serverů</h2>
-                <p class="offer_description" data-translate="offer2-desc">Komplexní správa serverů, nastavování aplikací, herních serverů a další související služby.</p>
-            </div>
-            <div class="offer_item">
-                <span class="material-symbols-outlined offer_icon">chat</span>
-                <h2 class="offer_title" data-translate="offer3-title">Přímá komunikace</h2>
-                <p class="offer_description" data-translate="offer3-desc">Žádní prostředníci. Komunikujete přímo se mnou, vývojářem, který na vašem projektu pracuje.</p>
-            </div>
-            <div class="offer_item">
-                <span class="material-symbols-outlined offer_icon">bolt</span>
-                <h2 class="offer_title" data-translate="offer4-title">Rychlost a efektivita</h2>
-                <p class="offer_description" data-translate="offer4-desc">Jsem flexibilní a pracuji rychle. Váš projekt nebude stát měsíce ve frontě.</p>
-            </div>
-            <div class="offer_item">
-                <span class="material-symbols-outlined offer_icon">design_services</span>
-                <h2 class="offer_title" data-translate="offer5-title">Návrhy a konzultace</h2>
-                <p class="offer_description" data-translate="offer5-desc">Nejprve vytvořím návrh, který následně společně probereme, abychom zajistili, že splňuje vaše očekávání ještě před zahájením samotné realizace projektu.</p>
+                <img src="https://Action-Gaming.b-cdn.net/images/portfolio-dark-cz.webp" alt="Portfolio" class="project_image portfolio-preview" id="portfolio-preview" width="600" height="338" loading="lazy">
             </div>
         </div>
     </div>
     <div class="contact" id="contact">
-        <h1 class="contact-title" data-translate="contact-title">Kontakt</h1>
-        <p class="contact-subtitle" data-translate="contact-subtitle">Máte zájem o mé služby? Kontaktujte mě pomocí formuláře níže.</p>
+        <h1 class="contact-title">Kontakt</h1>
+        <p class="contact-subtitle">Chcete se spojit? Napište mi pomocí formuláře níže.</p>
 
         <div id="form-message" class="form-message" style="display: none;"></div>
-        <form id="contact-form" action="form.php" method="post" class="scroll-animate-scale animate">
-            <label for="name" data-translate="contact-name">Jméno:</label>
-            <input type="text" id="name" name="name" required="" minlength="2" maxlength="50" data-translate="contact-name-placeholder">
-            <span class="field-helper" data-translate="contact-name-helper">2-50 znaků</span>
+        <form id="contact-form" data-action="form.php?v=2" class="scroll-animate-scale animate">
+            <label for="name">Jméno:</label>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Vaše jméno" aria-label="Vaše jméno">
+            <span class="field-helper">2-50 znaků</span>
         
-            <label for="email" data-translate="contact-email">Email:</label>
-            <input type="email" id="email" name="email" required="" maxlength="100" data-translate="contact-email-placeholder">
-            <span class="field-helper" data-translate="contact-email-helper">Platná emailová adresa</span>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required maxlength="100" placeholder="vas@email.cz" aria-label="Váš email">
+            <span class="field-helper">Platná emailová adresa</span>
         
-            <label for="service" data-translate="contact-service">Služba:</label>
-            <select id="service" name="service" required="">
-                <option value="" data-translate="contact-service-select">-- Vyberte službu --</option>
-                <option value="web" data-translate="contact-service-web">Vytvoření webové stránky nebo webové aplikace</option>
-                <option value="web+server" data-translate="contact-service-gameserver">Technik herního serveru</option>
-                <option value="server" data-translate="contact-service-server">Technik serveru</option>
-                <option value="wserver" data-translate="contact-service-consult">Konzultace a dotazy</option>
-                <option value="consultation" data-translate="contact-service-consult">Konzultace</option>
-            </select>
+            <label for="subject">Předmět:</label>
+            <input type="text" id="subject" name="subject" required minlength="3" maxlength="100" placeholder="Předmět zprávy" aria-label="Předmět zprávy">
+            <span class="field-helper">3-100 znaků</span>
         
-            <label for="message" data-translate="contact-message">Zpráva:</label>
-            <textarea id="message" name="message" rows="4" required="" minlength="10" maxlength="1000" data-translate="contact-message-placeholder"></textarea>
-            <span class="field-helper" data-translate="contact-message-helper">10-1000 znaků</span>
+            <label for="message">Zpráva:</label>
+            <textarea id="message" name="message" rows="4" required minlength="10" maxlength="1000" placeholder="Vaše zpráva... (10-1000 znaků)" aria-label="Vaše zpráva"></textarea>
+            <span class="field-helper">10-1000 znaků</span>
         
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAB1wznCENAD23O9P"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-rc68g_response" value=""></div></div>
-            <button type="submit" id="submit-btn" data-translate="contact-submit" disabled>Odeslat</button>
-            <p>*formulář nedostupný z důvodu změny hostingu a self-host emailu na vps bude chvíly trvat na zprovozdnění, pro kontakt využij socialní sítě nebo přímo napiš na admin@nautixrp.eu</p>
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACNsavJjz9TJ-GeK"></div>
+            <button type="button" id="submit-btn">Odeslat</button>
         </form>
     </div>
     
     <div class="menu_links_social">
-        <h2 data-translate="contact-social-title">Kontaktujte mě také přes sociální sítě:</h2>
-        <a href="images/email-svgrepo-com.svg" class="social_link"><img src="images/email-svgrepo-com.svg" alt="Email" class="social_icon"></a>
-        <a href="images/github-svgrepo-com.svg" class="social_link"><img src="images/github-svgrepo-com.svg" alt="Github" class="social_icon"></a>
-        <a href="images/steam-svgrepo-com.svg" class="social_link"><img src="images/steam-svgrepo-com.svg" alt="Steam" class="social_icon"></a>
-        <a href="images/discord-alt-svgrepo-com.svg" class="social_link"><img src="images/discord-alt-svgrepo-com.svg" alt="Discord" class="social_icon"></a>
+        <h2>Najdete mě také na:</h2>
+        <a href="https://Action-Gaming.b-cdn.net/images/email-svgrepo-com.svg" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/email-svgrepo-com.svg" alt="Email" class="social_icon"></a>
+        <a href="https://Action-Gaming.b-cdn.net/images/github-svgrepo-com.svg" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/github-svgrepo-com.svg" alt="Github" class="social_icon"></a>
+        <a href="https://Action-Gaming.b-cdn.net/images/steam-svgrepo-com.svg" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/steam-svgrepo-com.svg" alt="Steam" class="social_icon"></a>
+        <a href="https://Action-Gaming.b-cdn.net/images/discord-alt-svgrepo-com.svg" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/discord-alt-svgrepo-com.svg" alt="Discord" class="social_icon"></a>
     </div>
     
     <footer>
         <p>&copy; 2025 Jirka086. Všechna práva vyhrazena.</p>
     </footer>
-    <script src="script.js?v=7" defer></script>
+    <script src="script.js?v=8" defer></script>
 </body>
 </html>

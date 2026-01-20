@@ -109,14 +109,15 @@ body {
 .skills::before,
 .projects::before,
 .offer::before,
-.contact::before {
+.contact::before,
+.projects::after {
     content: '';
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     border-radius: 50%;
-    filter: blur(150px);
-    opacity: 0.9;
+    filter: blur(200px);
+    opacity: 0.6;
     pointer-events: none;
     z-index: -1;
 }
@@ -124,19 +125,34 @@ body {
 /* Left corner circle - blue tone */
 .skills::before,
 .offer::before {
-    background-color: var(--circle-1);
-    left: -300px;
+    background: radial-gradient(circle, var(--circle-3), var(--circle-1));
+    left: -350px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 /* Right corner circle - purple tone */
-.projects::before,
-.contact::before {
-    background-color: var(--circle-2);
-    right: -300px;
-    top: 50%;
+.projects::before {
+    background: radial-gradient(circle, var(--circle-4), var(--circle-2));
+    right: -350px;
+    top: 25%;
     transform: translateY(-50%);
+}
+
+.contact::before {
+    background: radial-gradient(circle, var(--circle-4), var(--circle-2));
+    right: -350px;
+    top: 75%;
+    transform: translateY(-50%);
+}
+
+/* Additional blue circle for projects section (bottom-left) */
+.projects::after {
+    background: radial-gradient(circle, var(--circle-3), var(--circle-1));
+    left: -250px;
+    bottom: -300px;
+    width: 650px;
+    height: 650px;
 }
 
 /* Navigation */
@@ -828,6 +844,20 @@ body.light-theme .hero_right::before {
     margin-bottom: 20px;
     border-radius: 8px;
     font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#form-message.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+#form-message.error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border: 1px solid #f44336;
 }
 
 #contact-form {

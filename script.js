@@ -5,7 +5,6 @@ const translations = {
         'nav-about': 'O mně',
         'nav-skills': 'Skills',
         'nav-projects': 'Projekty',
-        'nav-offer': 'Nabízím',
         'nav-contact': 'Kontakt',
         
         // About section
@@ -13,7 +12,7 @@ const translations = {
         'about-name': 'Jirka086',
         'about-role': 'Developer a IT specialista',
         'about-description': 'Jsem nadšenec pro technologie se zaměřením na správu serverů, vývoj webových stránek a webových aplikací. Baví mě experimentovat, hledat nová řešení a neustále se zdokonalovat. Rád pomáhám ostatním, sdílím své znalosti a v současnosti studuji IT.',
-        'about-button': 'Kontaktujte mě',
+        'about-button': 'Napište mi',
         
         // Skills section
         'skills-title': 'Moje zkušenosti',
@@ -35,49 +34,32 @@ const translations = {
         'project2-link': 'Navštívit web',
         'project3-title': 'Portfolio',
         'project3-tech': 'Vývoj webu: HTML5, CSS, PHP, JavaScript',
-        'project3-desc': 'Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT služeb. Portfolio slouží jako ukázka mé práce a umožňuje potenciálním klientům a zaměstnavatelům se lépe seznámit s mými schopnostmi.',
+        'project3-desc': 'Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT. Portfolio slouží jako ukázka mé práce a umožňuje ostatním se lépe seznámit s mými schopnostmi.',
         'project3-link': 'Navštívit web',
-        
-        // Offer section
-        'offer-title': 'Co nabízím',
-        'offer1-title': 'Vývoj webu a webových aplikací',
-        'offer1-desc': 'Nabízím tvorbu moderních a responzivních webových stránek a aplikací přesně na míru vašim potřebám.',
-        'offer2-title': 'Správa serverů',
-        'offer2-desc': 'Komplexní správa serverů, nastavování aplikací, herních serverů a další související služby.',
-        'offer3-title': 'Přímá komunikace',
-        'offer3-desc': 'Žádní prostředníci. Komunikujete přímo se mnou, vývojářem, který na vašem projektu pracuje.',
-        'offer4-title': 'Rychlost a efektivita',
-        'offer4-desc': 'Jsem flexibilní a pracuji rychle. Váš projekt nebude stát měsíce ve frontě.',
-        'offer5-title': 'Návrhy a konzultace',
-        'offer5-desc': 'Nejprve vytvořím návrh, který následně společně probereme, abychom zajistili, že splňuje vaše očekávání ještě před zahájením samotné realizace projektu.',
         
         // Contact section
         'contact-title': 'Kontakt',
-        'contact-subtitle': 'Máte zájem o mé služby? Kontaktujte mě pomocí formuláře níže.',
+        'contact-subtitle': 'Chcete se spojit? Napište mi pomocí formuláře níže.',
         'contact-name': 'Jméno:',
         'contact-name-helper': '2-50 znaků',
         'contact-name-placeholder': 'Vaše jméno',
         'contact-email': 'Email:',
         'contact-email-helper': 'Platná emailová adresa',
         'contact-email-placeholder': 'vas@email.cz',
-        'contact-service': 'Služba:',
-        'contact-service-select': '-- Vyberte službu --',
-        'contact-service-web': 'Vytvoření webové stránky nebo webové aplikace',
-        'contact-service-gameserver': 'Technik herního serveru',
-        'contact-service-server': 'Technik serveru',
-        'contact-service-consult': 'Konzultace a dotazy',
+        'contact-subject': 'Předmět:',
+        'contact-subject-helper': '3-100 znaků',
+        'contact-subject-placeholder': 'Předmět zprávy',
         'contact-message': 'Zpráva:',
         'contact-message-helper': '10-1000 znaků',
-        'contact-message-placeholder': 'Popište podrobně, co potřebujete... (10-1000 znaků)',
+        'contact-message-placeholder': 'Vaše zpráva... (10-1000 znaků)',
         'contact-submit': 'Odeslat',
-        'contact-social-title': 'Kontaktujte mě také přes sociální sítě:'
+        'contact-social-title': 'Najdete mě také na:'
     },
     en: {
         // Navbar
         'nav-about': 'About',
         'nav-skills': 'Skills',
         'nav-projects': 'Projects',
-        'nav-offer': 'Services',
         'nav-contact': 'Contact',
         
         // About section
@@ -85,7 +67,7 @@ const translations = {
         'about-name': 'Jirka086',
         'about-role': 'Developer and IT Specialist',
         'about-description': 'I am a technology enthusiast focused on server management, website development, and web applications. I enjoy experimenting, finding new solutions, and constantly improving. I like helping others, sharing my knowledge, and I am currently studying IT.',
-        'about-button': 'Contact Me',
+        'about-button': 'Write to me',
         
         // Skills section
         'skills-title': 'My Experience',
@@ -107,42 +89,26 @@ const translations = {
         'project2-link': 'Visit website',
         'project3-title': 'Portfolio',
         'project3-tech': 'Web development: HTML5, CSS, PHP, JavaScript',
-        'project3-desc': 'My personal portfolio, where I present my skills, projects, and experience in web development and IT services. The portfolio serves as a showcase of my work and allows potential clients and employers to better get to know my abilities.',
+        'project3-desc': 'My personal portfolio, where I present my skills, projects, and experience in web development and IT. The portfolio serves as a showcase of my work and allows others to better get to know my abilities.',
         'project3-link': 'Visit website',
-        
-        // Offer section
-        'offer-title': 'What I Offer',
-        'offer1-title': 'Web and Web App Development',
-        'offer1-desc': 'I offer the creation of modern and responsive websites and applications tailored to your needs.',
-        'offer2-title': 'Server Management',
-        'offer2-desc': 'Comprehensive server management, application setup, game servers, and other related services.',
-        'offer3-title': 'Direct Communication',
-        'offer3-desc': 'No middlemen. You communicate directly with me, the developer working on your project.',
-        'offer4-title': 'Speed and Efficiency',
-        'offer4-desc': 'I am flexible and work quickly. Your project will not sit in a queue for months.',
-        'offer5-title': 'Design and Consultation',
-        'offer5-desc': 'I will first create a design, which we will then discuss together to ensure it meets your expectations before starting the actual implementation of the project.',
         
         // Contact section
         'contact-title': 'Contact',
-        'contact-subtitle': 'Interested in my services? Contact me using the form below.',
+        'contact-subtitle': 'Want to get in touch? Write to me using the form below.',
         'contact-name': 'Name:',
         'contact-name-helper': '2-50 characters',
         'contact-name-placeholder': 'Your name',
         'contact-email': 'Email:',
         'contact-email-helper': 'Valid email address',
         'contact-email-placeholder': 'your@email.com',
-        'contact-service': 'Service:',
-        'contact-service-select': '-- Select service --',
-        'contact-service-web': 'Website or web application creation',
-        'contact-service-gameserver': 'Game server technician',
-        'contact-service-server': 'Server technician',
-        'contact-service-consult': 'Consultation and inquiries',
+        'contact-subject': 'Subject:',
+        'contact-subject-helper': '3-100 characters',
+        'contact-subject-placeholder': 'Message subject',
         'contact-message': 'Message:',
         'contact-message-helper': '10-1000 characters',
-        'contact-message-placeholder': 'Describe in detail what you need... (10-1000 characters)',
+        'contact-message-placeholder': 'Your message... (10-1000 characters)',
         'contact-submit': 'Send',
-        'contact-social-title': 'Contact me also via social networks:'
+        'contact-social-title': 'Find me also on:'
     }
 };
 
@@ -402,11 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateElements = [
         '.skills',
         '.projects',
-        '.offer',
         '.contact',
-        '.skill_item',
-        '.project_item',
-        '.offer_item'
+        '.project_item'
     ];
     
     animateElements.forEach(selector => {
@@ -420,4 +383,98 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
     });
+
+    // Handle skill items separately per section to reset delay counter
+    const skillSections = [
+        '.skill_frontend_grid',
+        '.skill_backend_grid',
+        '.skill_tools_grid',
+        '.skill_gameservers_grid',
+        '.skill_learning_grid'
+    ];
+
+    skillSections.forEach(sectionSelector => {
+        const section = document.querySelector(sectionSelector);
+        if (section) {
+            const items = section.querySelectorAll('.skill_item');
+            items.forEach((item, index) => {
+                item.classList.add('animate-on-scroll');
+                item.style.transitionDelay = `${index * 0.05}s`;
+                observer.observe(item);
+            });
+        }
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    if (contactForm && submitBtn) {
+        // Handle button click instead of form submit
+        submitBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Validate form manually
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+            
+            // Disable submit button during processing
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Odesílám...';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Add current language to form data
+            formData.append('language', currentLang);
+            
+            // Get the form action URL (handles both root and /en/ paths)
+            const formAction = contactForm.getAttribute('data-action');
+            
+            try {
+                // Send form data to PHP backend
+                const response = await fetch(formAction, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                // Show message
+                formMessage.style.display = 'block';
+                
+                if (result.success) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = result.message;
+                    contactForm.reset();
+                } else {
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = result.message;
+                }
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+                
+            } catch (error) {
+                formMessage.style.display = 'block';
+                formMessage.className = 'form-message error';
+                formMessage.textContent = currentLang === 'en' 
+                    ? 'An error occurred while sending the message. Please try again.' 
+                    : 'Při odesílání zprávy došlo k chybě. Zkuste to prosím znovu.';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = currentLang === 'en' ? 'Send' : 'Odeslat';
+            }
+        });
+    }
 });
