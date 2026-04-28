@@ -318,10 +318,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isActive) {
                 linksCenter.classList.remove('active');
                 controlsRight.classList.remove('active');
+                document.body.classList.remove('menu-open');
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'menu';
             } else {
                 linksCenter.classList.add('active');
                 controlsRight.classList.add('active');
+                document.body.classList.add('menu-open');
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'close';
             }
         });
@@ -331,6 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 linksCenter.classList.remove('active');
                 controlsRight.classList.remove('active');
+                document.body.classList.remove('menu-open');
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'menu';
             });
         });
@@ -343,6 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 !controlsRight.contains(e.target)) {
                 linksCenter.classList.remove('active');
                 controlsRight.classList.remove('active');
+                document.body.classList.remove('menu-open');
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'menu';
             }
         });
