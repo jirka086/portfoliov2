@@ -6,14 +6,14 @@ const translations = {
         'nav-skills': 'Skills',
         'nav-projects': 'Projekty',
         'nav-contact': 'Kontakt',
-        
+
         // About section
         'about-hello': 'AHOJ, JSEM',
         'about-name': 'Jirka086',
         'about-role': 'Developer a IT specialista',
         'about-description': 'Jsem nadšenec pro technologie se zaměřením na správu serverů, vývoj webových stránek a webových aplikací. Baví mě experimentovat, hledat nová řešení a neustále se zdokonalovat. Rád pomáhám ostatním, sdílím své znalosti a v současnosti studuji IT.',
         'about-button': 'Napište mi',
-        
+
         // Skills section
         'skills-title': 'Moje zkušenosti',
         'skills-frontend': 'Frontend',
@@ -21,7 +21,7 @@ const translations = {
         'skills-tools': 'Nástroje a platformy',
         'skills-gameservers': 'Technik herních serverů',
         'skills-learning': 'Základy / Učím se',
-        
+
         // Projects section
         'projects-title': 'Moje projekty',
         'project1-title': 'Action Gaming',
@@ -36,7 +36,7 @@ const translations = {
         'project3-tech': 'Vývoj webu: HTML5, CSS, PHP, JavaScript',
         'project3-desc': 'Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT. Portfolio slouží jako ukázka mé práce a umožňuje ostatním se lépe seznámit s mými schopnostmi.',
         'project3-link': 'Navštívit web',
-        
+
         // Contact section
         'contact-title': 'Kontakt',
         'contact-subtitle': 'Chcete se spojit? Napište mi pomocí formuláře níže.',
@@ -61,14 +61,14 @@ const translations = {
         'nav-skills': 'Skills',
         'nav-projects': 'Projects',
         'nav-contact': 'Contact',
-        
+
         // About section
         'about-hello': 'HI, I AM',
         'about-name': 'Jirka086',
         'about-role': 'Developer and IT Specialist',
         'about-description': 'I am a technology enthusiast focused on server management, website development, and web applications. I enjoy experimenting, finding new solutions, and constantly improving. I like helping others, sharing my knowledge, and I am currently studying IT.',
         'about-button': 'Write to me',
-        
+
         // Skills section
         'skills-title': 'My Experience',
         'skills-frontend': 'Frontend',
@@ -76,7 +76,7 @@ const translations = {
         'skills-tools': 'Tools and Platforms',
         'skills-gameservers': 'Game Server Technician',
         'skills-learning': 'Basics / Learning',
-        
+
         // Projects section
         'projects-title': 'My Projects',
         'project1-title': 'Action Gaming',
@@ -91,7 +91,7 @@ const translations = {
         'project3-tech': 'Web development: HTML5, CSS, PHP, JavaScript',
         'project3-desc': 'My personal portfolio, where I present my skills, projects, and experience in web development and IT. The portfolio serves as a showcase of my work and allows others to better get to know my abilities.',
         'project3-link': 'Visit website',
-        
+
         // Contact section
         'contact-title': 'Contact',
         'contact-subtitle': 'Want to get in touch? Write to me using the form below.',
@@ -115,28 +115,23 @@ const translations = {
 // Language Management
 let currentLang = 'cs';
 
-// Detect user language
 function detectLanguage() {
-    // Check URL path
     if (window.location.pathname.includes('/en/') || window.location.pathname.endsWith('/en')) {
         return 'en';
     }
-    
-    // Check localStorage
+
     const savedLang = localStorage.getItem('language');
     if (savedLang) {
         return savedLang;
     }
-    
-    // Default to Czech
+
     return 'cs';
 }
 
-// Apply translations
 function applyTranslations(lang) {
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             if (element.hasAttribute('placeholder')) {
                 element.placeholder = translations[lang][key];
             } else if (element.tagName === 'OPTION') {
@@ -146,62 +141,45 @@ function applyTranslations(lang) {
             }
         }
     });
-    
-    console.log('Language changed to:', lang, '- Applied to', document.querySelectorAll('[data-translate]').length, 'elements');
 }
 
-// Change language
 function changeLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('language', lang);
-    
-    // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
-    // Redirect to appropriate URL for SEO
+
     const currentPath = window.location.pathname;
-    
+
     if (lang === 'en') {
         if (!currentPath.includes('/en/') && !currentPath.endsWith('/en')) {
-            // Redirect to English version
             window.location.href = '/en/';
-            return; // Exit to prevent applying translations before redirect
+            return;
         }
-    } else {
-        if (currentPath.includes('/en/') || currentPath.endsWith('/en')) {
-            // Redirect to Czech version (root)
-            window.location.href = '/';
-            return; // Exit to prevent applying translations before redirect
-        }
+    } else if (currentPath.includes('/en/') || currentPath.endsWith('/en')) {
+        window.location.href = '/';
+        return;
     }
-    
+
     applyTranslations(lang);
 }
 
-// Initialize language
 function initLanguage() {
     const detectedLang = detectLanguage();
     currentLang = detectedLang;
-    
-    console.log('Initializing language:', currentLang);
-    
-    // Update toggle state
+
     const langToggle = document.getElementById('language-toggle');
     if (langToggle) {
         langToggle.checked = (currentLang === 'en');
-        console.log('Toggle state set to:', langToggle.checked);
     }
-    
+
     applyTranslations(currentLang);
 }
 
-// Navbar Active State
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section, div[id]');
     const navLinks = document.querySelectorAll('.links-center ul li a');
-    
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -209,7 +187,7 @@ function updateActiveNavLink() {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').substring(1) === current) {
@@ -218,15 +196,12 @@ function updateActiveNavLink() {
     });
 }
 
-// Scroll Indicator
 const scrollIndicator = document.querySelector('.scroll-indicator');
 let scrolled = false;
 
 window.addEventListener('scroll', () => {
-    // Update active nav link
     updateActiveNavLink();
-    
-    // Hide scroll indicator
+
     if (!scrolled && window.scrollY > 50) {
         if (scrollIndicator) {
             scrollIndicator.classList.add('hidden');
@@ -235,12 +210,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize language
     initLanguage();
-    
-    // Update portfolio image based on theme and language
+
     function updatePortfolioImage() {
         const portfolioImg = document.getElementById('portfolio-preview');
         if (portfolioImg) {
@@ -252,19 +224,17 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolioImg.src = `${basePath}portfolio-${theme}-${lang}.webp`;
         }
     }
-    
-    // Theme toggle
+
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
-    
+
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
         if (themeToggle) themeToggle.checked = true;
     }
-    
-    // Update portfolio image on load
+
     updatePortfolioImage();
-    
+
     if (themeToggle) {
         themeToggle.addEventListener('change', (e) => {
             if (e.target.checked) {
@@ -277,21 +247,14 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePortfolioImage();
         });
     }
-    
-    // Language toggle
+
     const langToggle = document.getElementById('language-toggle');
-    console.log('Language toggle element:', langToggle);
     if (langToggle) {
         langToggle.addEventListener('change', (e) => {
-            console.log('Toggle changed! Checked:', e.target.checked);
             changeLanguage(e.target.checked ? 'en' : 'cs');
         });
-        console.log('Language toggle listener added');
-    } else {
-        console.error('Language toggle element not found!');
     }
-    
-    // Smooth scroll for indicator
+
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
             const skillsSection = document.querySelector('.skills');
@@ -300,21 +263,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
-    // Initial active nav link
+
     updateActiveNavLink();
-    
-    // Hamburger menu
+
     const hamburger = document.querySelector('.hamburger');
     const linksCenter = document.querySelector('.links-center');
     const controlsRight = document.querySelector('.controls-right');
     const navLinks = document.querySelectorAll('.links-center ul li a');
-    
+
     if (hamburger) {
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
             const isActive = linksCenter.classList.contains('active');
-            
+
             if (isActive) {
                 linksCenter.classList.remove('active');
                 controlsRight.classList.remove('active');
@@ -327,8 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'close';
             }
         });
-        
-        // Close menu when clicking nav links
+
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 linksCenter.classList.remove('active');
@@ -337,11 +297,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.querySelector('.material-symbols-outlined').textContent = 'menu';
             });
         });
-        
-        // Close menu when clicking outside
+
         document.addEventListener('click', (e) => {
-            if (linksCenter.classList.contains('active') && 
-                !linksCenter.contains(e.target) && 
+            if (linksCenter.classList.contains('active') &&
+                !linksCenter.contains(e.target) &&
                 !hamburger.contains(e.target) &&
                 !controlsRight.contains(e.target)) {
                 linksCenter.classList.remove('active');
@@ -351,36 +310,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
-    // Optimized scroll animations using IntersectionObserver
+
+    const socialMenu = document.querySelector('.menu_links_social');
+    const contactSection = document.querySelector('#contact');
+
+    if (socialMenu && contactSection) {
+        const updateSocialMenuVisibility = () => {
+            const rect = contactSection.getBoundingClientRect();
+            const isContactVisible = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
+            socialMenu.classList.toggle('hidden', isContactVisible);
+        };
+
+        updateSocialMenuVisibility();
+        window.addEventListener('scroll', updateSocialMenuVisibility, { passive: true });
+        window.addEventListener('resize', updateSocialMenuVisibility);
+    }
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Unobserve after animation for better performance
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
-    // Observe sections and items
+
     const animateElements = [
         '.skills',
         '.projects',
         '.contact',
         '.project_item'
     ];
-    
+
     animateElements.forEach(selector => {
         const elements = document.querySelectorAll(selector);
         elements.forEach((el, index) => {
             el.classList.add('animate-on-scroll');
-            // Stagger animation delay for items
             if (selector.includes('_item')) {
                 el.style.transitionDelay = `${index * 0.05}s`;
             }
@@ -388,7 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle skill items separately per section to reset delay counter
     const skillSections = [
         '.skill_frontend_grid',
         '.skill_backend_grid',
@@ -408,77 +377,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
-    // Contact form handling
-    const contactForm = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
-    const submitBtn = document.getElementById('submit-btn');
-    
-    if (contactForm && submitBtn) {
-        // Handle button click instead of form submit
-        submitBtn.addEventListener('click', async (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Validate form manually
-            if (!contactForm.checkValidity()) {
-                contactForm.reportValidity();
-                return;
-            }
-            
-            // Disable submit button during processing
-            submitBtn.disabled = true;
-            submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Odesílám...';
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            
-            // Add current language to form data
-            formData.append('language', currentLang);
-            
-            // Get the form action URL (handles both root and /en/ paths)
-            const formAction = contactForm.getAttribute('data-action');
-            
-            try {
-                // Send form data to PHP backend
-                const response = await fetch(formAction, {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const result = await response.json();
-                
-                // Show message
-                formMessage.style.display = 'block';
-                
-                if (result.success) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = result.message;
-                    contactForm.reset();
-                } else {
-                    formMessage.className = 'form-message error';
-                    formMessage.textContent = result.message;
-                }
-                
-                // Scroll to message
-                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 5000);
-                
-            } catch (error) {
-                formMessage.style.display = 'block';
-                formMessage.className = 'form-message error';
-                formMessage.textContent = currentLang === 'en' 
-                    ? 'An error occurred while sending the message. Please try again.' 
-                    : 'Při odesílání zprávy došlo k chybě. Zkuste to prosím znovu.';
-            } finally {
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.textContent = currentLang === 'en' ? 'Send' : 'Odeslat';
-            }
-        });
-    }
 });

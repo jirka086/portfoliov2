@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" media="print" onload="this.media='all'">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <link rel="stylesheet" href="styles.css?v=13">
+    <link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body>
     <nav>
@@ -66,7 +65,7 @@
             <a href="#contact" class="contact_button">Napište mi</a>
         </div>
         <div class="hero_right">
-            <img src="https://Action-Gaming.b-cdn.net/images/profile.webp" alt="Profilový obrázek Jirka086" width="400" height="400" loading="lazy">
+            <img src="images/profile.webp" alt="Profilový obrázek Jirka086" width="400" height="400" loading="lazy">
         </div>
         <div class="scroll-indicator">
             <span class="material-symbols-outlined">expand_more</span>
@@ -111,21 +110,12 @@
         <div class="project_grid">
             <div class="project_item">
                 <div class="project_content">
-                    <h2 class="project_title">Action Gaming</h2>
-                    <p class="project_techorposition">Spolumajitel (Technik)</p>
+                    <h2 class="project_title">Acheron</h2>
+                    <p class="project_techorposition">Správce serveru</p>
                     <p class="project_description">Herní portál Action Gaming hostuje servery pro hru SCP:SL s kvalitním roleplay zážitkem. Jsme komunita, kde si zakládáme na civilizovaném chování a především na již zmíněné kvalitě. Nabízíme vlastní mapy, pluginy a profesionální tým včetně vedení serveru. Naším cílem je posunout hranici zpátky tam, kde byla již před několika lety na jiných serverech, kde roleplay ještě představovalo ten pravý zážitek a každý se měl možnost něco nového naučit.</p>
                     <a href="https://actiongaming.cz" class="project_link">Discord invite</a>
                 </div>
-                <img src="https://Action-Gaming.b-cdn.net/images/action-gaming-preview2.webp" alt="Action Gaming" class="project_image" width="600" height="338" loading="lazy">
-            </div>
-            <div class="project_item">
-                <div class="project_content">
-                    <h2 class="project_title">NAUTIXRP</h2>
-                    <p class="project_techorposition">Community Management, vývoj webu: HTML5, PHP, CSS</p>
-                    <p class="project_description">NautixRP je česká herní komunita zaměřená na kvalitní roleplay zážitek ve hře GTA V na platformě FiveM. Naším cílem je vytvořit prostředí, kde hráči mohou zažít autentické roleplay situace, rozvíjet své postavy a interagovat s ostatními členy komunity v přátelské a respektující atmosféře.</p>
-                    <a href="https://nautixrp.eu" class="project_link">Navštívit web</a>
-                </div>
-                <img src="https://Action-Gaming.b-cdn.net/images/heebTxs.webp" alt="NAUTIXRP" class="project_image" width="600" height="338" loading="lazy">
+                <img src="images/action-gaming-preview2.webp" alt="Action Gaming" class="project_image" width="600" height="338" loading="lazy">
             </div>
             <div class="project_item">
                 <div class="project_content">
@@ -134,7 +124,7 @@
                     <p class="project_description">Jednoduché pluginy pro Minecraft, které jsem vytvořil pro učení Javy. Většina z nich možná není aktivně udržována a nejsou dokonalé. V některých pluginech mohlo být použito malé množství umělé inteligence.</p>
                     <a href="https://modrinth.com/user/jirka086" class="project_link">Navštívit modrinth</a>
                 </div>
-                <img src="https://Action-Gaming.b-cdn.net/images/5a5f7c602e1e6d5a27ebdc9ed41ffbe81e10daab.png" alt="Minecraft Pluginy" class="project_image" loading="lazy">
+                <img src="images/5a5f7c602e1e6d5a27ebdc9ed41ffbe81e10daab.png" alt="Minecraft Pluginy" class="project_image" loading="lazy">
             </div>
             <div class="project_item">
                 <div class="project_content">
@@ -143,49 +133,35 @@
                     <p class="project_description">Moje osobní portfolio, kde prezentuji své dovednosti, projekty a zkušenosti v oblasti vývoje webových stránek a IT. Portfolio slouží jako ukázka mé práce a umožňuje ostatním se lépe seznámit s mými schopnostmi.</p>
                     <a href="https://jirka086.cz" class="project_link">Navštívit web</a>
                 </div>
-                <img src="https://Action-Gaming.b-cdn.net/images/portfolio-dark-cz.webp" alt="Portfolio" class="project_image portfolio-preview" id="portfolio-preview" width="600" height="338" loading="lazy">
+                <img src="images/portfolio-dark-cz.webp" alt="Portfolio" class="project_image portfolio-preview" id="portfolio-preview" width="600" height="338" loading="lazy">
             </div>
         </div>
     </div>
     <div class="contact" id="contact">
         <h1 class="contact-title">Kontakt</h1>
-        <p class="contact-subtitle">Chcete se spojit? Napište mi pomocí formuláře níže.</p>
+        <p class="contact-subtitle">můžete mě kontaktovat pomocí těchto odkazů.</p>
 
-        <div id="form-message" class="form-message" style="display: none;"></div>
-        <form id="contact-form" data-action="form.php?v=2" class="scroll-animate-scale animate">
-            <label for="name">Jméno:</label>
-            <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Vaše jméno" aria-label="Vaše jméno">
-            <span class="field-helper">2-50 znaků</span>
-        
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required maxlength="100" placeholder="vas@email.cz" aria-label="Váš email">
-            <span class="field-helper">Platná emailová adresa</span>
-        
-            <label for="subject">Předmět:</label>
-            <input type="text" id="subject" name="subject" required minlength="3" maxlength="100" placeholder="Předmět zprávy" aria-label="Předmět zprávy">
-            <span class="field-helper">3-100 znaků</span>
-        
-            <label for="message">Zpráva:</label>
-            <textarea id="message" name="message" rows="4" required minlength="10" maxlength="1000" placeholder="Vaše zpráva... (10-1000 znaků)" aria-label="Vaše zpráva"></textarea>
-            <span class="field-helper">10-1000 znaků</span>
-        
-            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAACNsavJjz9TJ-GeK"></div>
-            <button type="button" id="submit-btn">Odeslat</button>
-        </form>
+        <div class="contact-social">
+            <div class="social_links_row">
+                <a href="admin@nautixrp.eu" class="social_link"><img src="images/email-svgrepo-com.svg" alt="Email" class="social_icon"></a>
+                <a href="https://github.com/jirka086" class="social_link"><img src="images/github-svgrepo-com.svg" alt="Github" class="social_icon"></a>
+                <a href="https://steamcommunity.com/id/jirka086/" class="social_link"><img src="images/steam-svgrepo-com.svg" alt="Steam" class="social_icon"></a>
+                <a href="https://discord.com/users/371269384284405771" class="social_link"><img src="images/discord-alt-svgrepo-com.svg" alt="Discord" class="social_icon"></a>
+            </div>
+        </div>
     </div>
     
-    <div class="menu_links_social">
+    <div class="menu_links_social" aria-label="Social media links">
         <h2>Najdete mě také na:</h2>
-        <a href="admin@nautixrp.eu" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/email-svgrepo-com.svg" alt="Email" class="social_icon"></a>
-        <a href="https://github.com/jirka086" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/github-svgrepo-com.svg" alt="Github" class="social_icon"></a>
-        <a href="https://steamcommunity.com/id/jirka086/" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/steam-svgrepo-com.svg" alt="Steam" class="social_icon"></a>
-        <a href="https://discord.com/users/371269384284405771" class="social_link"><img src="https://Action-Gaming.b-cdn.net/images/discord-alt-svgrepo-com.svg" alt="Discord" class="social_icon"></a>
+        <a href="admin@nautixrp.eu" class="social_link"><img src="images/email-svgrepo-com.svg" alt="Email" class="social_icon"></a>
+        <a href="https://github.com/jirka086" class="social_link"><img src="images/github-svgrepo-com.svg" alt="Github" class="social_icon"></a>
+        <a href="https://steamcommunity.com/id/jirka086/" class="social_link"><img src="images/steam-svgrepo-com.svg" alt="Steam" class="social_icon"></a>
+        <a href="https://discord.com/users/371269384284405771" class="social_link"><img src="images/discord-alt-svgrepo-com.svg" alt="Discord" class="social_icon"></a>
     </div>
     
     <footer>
-        <p>&copy; 2025 Jirka086. Všechna práva vyhrazena.</p>
+        <p>&copy; 2024-2026 Jirka086. Všechna práva vyhrazena.</p>
     </footer>
-    <script src="script.js?v=8" defer></script>
+    <script src="script.js?v=9" defer></script>
 </body>
 </html>
