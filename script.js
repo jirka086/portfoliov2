@@ -152,7 +152,7 @@ function changeLanguage(lang) {
 
     if (lang === 'en') {
         if (!currentPath.includes('/en/') && !currentPath.endsWith('/en')) {
-            window.location.href = '/en/';
+            window.location.href = '/en/index.html';
             return;
         }
     } else if (currentPath.includes('/en/') || currentPath.endsWith('/en')) {
